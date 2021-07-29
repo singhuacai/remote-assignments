@@ -10,13 +10,21 @@ function countAandB(input) {
         }
     }
     sum = countA + countB;
-    if (countB <= 1){
+    if (countA===0 && countB ===0){
+        return (0);
+    }else if(countA <= 1 && countB > 1){
+        return (sum+" ("+ countA +" \'a\' letter and "+ countB + " \'b\' letters)"); 
+    }else if(countA > 1 && countB <= 1){
         return (sum+" ("+ countA +" \'a\' letters and "+ countB + " \'b\' letter)"); 
+    }else if(countA <= 1 && countB <= 1){
+        return (sum+" ("+ countA +" \'a\' letter and "+ countB + " \'b\' letter)"); 
     }else{
         return (sum+" ("+ countA +" \'a\' letters and "+ countB + " \'b\' letters)");
-    }     
+    }   
 }
 
-let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
-countAandB(input1);
-console.log(countAandB(input1)); 
+// let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
+// console.log(countAandB(input1)); 
+
+let input2 = ['e', 'd', 'c', 'd', 'e'];
+console.log(countAandB(input2)); 
