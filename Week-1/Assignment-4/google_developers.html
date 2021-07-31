@@ -11,8 +11,8 @@
     <devsite-header>
         <div class="devsite-top-logo-row">
             <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button 
-                   button-flat 
-                   material-icons">
+                           button-flat 
+                           material-icons">
                 <span class="material-icons">menu</span>
             </button>
             <div class="devsite-product-name-wrapper">
@@ -20,351 +20,92 @@
                     <img src="https://www.gstatic.com/devrel-devsite/prod/v0492b3db79b8927fe2347ea2dc87c471b22f173331622ffd10334837d43ea37f/developers/images/lockup.svg"
                         class="devsite-site-logo" alt="Google Developers">
                 </a>
-                <!-- <span class="devsite-product-name">
-                    <ul class="devsite-breadcrumb-list">
-                        <li class="devsite-breadcrumb-item devsite-has-google-wordmark"></li>
-                    </ul>
-                </span> -->
             </div>
-            <div class="devsite-top-logo-row-middle">
-                <div class="devsite-header-upper-tabs">
-                    <devsite-tabs class="upper-tabs" connected="">
+            <!-- <div class="devsite-top-logo-row-middle"> -->
+                <!-- <div class="devsite-header-upper-tabs"> -->
+                    <devsite-tabs class="upper-tabs" connected>
                         <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
-                            <tab overflow-tab="" hidden=""><a href="#"
-                                    class="devsite-icon devsite-icon-arrow-drop-down">更多選項</a>
+                            <tab dropdown>
+                                <a href="https://developers.google.com/products" 
+                                    class="gc-analytics-event" 
+                                    track-type="nav"
+                                    track-name="products" 
+                                    track-metadata-eventdetail="https://developers.google.com/products"
+                                    track-metadata-position="nav - products" 
+                                    track-metadata-module="primary nav"
+                                    data-category="Site-Wide Custom Events" 
+                                    data-label="Tab: Products">Products</a>
+                                <!-- <a href="#" role="button" aria-haspopup="true" aria-expanded="false"
+                                    aria-label="Dropdown menu for Products" track-type="nav" track-name="products"
+                                    track-metadata-eventdetail="https://developers.google.com/products"
+                                    track-metadata-position="nav - products" track-metadata-module="primary nav"
+                                    data-category="Site-Wide Custom Events" data-label="Tab: Products" class="devsite-tabs-dropdown-toggle
+                                        devsite-icon 
+                                        devsite-icon-arrow-drop-down">
+                                </a> -->
+                            </tab>
+                            <tab>
+                                <a href="https://developers.google.com/events" 
+                                    class="gc-analytics-event" 
+                                    track-type="nav"
+                                    track-name="events" 
+                                    track-metadata-eventdetail="https://developers.google.com/events"
+                                    track-metadata-position="nav - events" 
+                                    track-metadata-module="primary nav"
+                                    data-category="Site-Wide Custom Events" 
+                                    data-label="Tab: Events"> Events </a>
+                            </tab>
+                            <tab>
+                                <a href="https://developers.google.com/learn" 
+                                    class="gc-analytics-event " 
+                                    track-type="nav"
+                                    track-name="learn" 
+                                    track-metadata-eventdetail="https://developers.google.com/learn"
+                                    track-metadata-position="nav - learn" 
+                                    track-metadata-module="primary nav"
+                                    data-category="Site-Wide Custom Events" 
+                                    data-label="Tab: Learn"> Learn</a>
+                            </tab>
+                            <tab overflow-tab="">
+                                <a href="#" 
+                                class="devsite-icon devsite-icon-arrow-drop-down gc-analytics-event">More</a>
+                                <!-- 更多選項的下拉選單 -->
+                                <!--
                                 <div class="devsite-tabs-overflow-menu" scrollbars="" hidden="">
-                                    <tab dropdown="">
-                                        <a href="https://developers.google.com/products" class="gc-analytics-event "
-                                            track-type="nav" track-name="products"
-                                            track-metadata-eventdetail="https://developers.google.com/products"
-                                            track-metadata-position="nav - products" track-metadata-module="primary nav"
-                                            data-category="Site-Wide Custom Events" data-label="Tab: Products">
-                                            Products
-                                        </a>
-                                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false"
-                                            aria-label="Dropdown menu for Products" track-type="nav"
-                                            track-name="products"
-                                            track-metadata-eventdetail="https://developers.google.com/products"
-                                            track-metadata-position="nav - products" track-metadata-module="primary nav"
-                                            data-category="Site-Wide Custom Events" data-label="Tab: Products"
-                                            class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
-                                        <div class="devsite-tabs-dropdown" aria-label="submenu" hidden="">
-                                            <div class="devsite-tabs-dropdown-content">
-                                                <div class="devsite-tabs-dropdown-column">
-                                                    <ul class="devsite-tabs-dropdown-section">
-                                                        <li class="devsite-nav-title" role="heading" tooltip="">Develop
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//developer.android.com" track-type="nav"
-                                                                track-name="android"
-                                                                track-metadata-eventdetail="//developer.android.com"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Android
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//cloud.google.com" track-type="nav"
-                                                                track-name="cloud"
-                                                                track-metadata-eventdetail="//cloud.google.com"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Cloud
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//firebase.google.com" track-type="nav"
-                                                                track-name="firebase"
-                                                                track-metadata-eventdetail="//firebase.google.com"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Firebase
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//flutter.dev" track-type="nav"
-                                                                track-name="flutter"
-                                                                track-metadata-eventdetail="//flutter.dev"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Flutter
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/assistant"
-                                                                track-type="nav" track-name="google assistant"
-                                                                track-metadata-eventdetail="https://developers.google.com/assistant"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Assistant
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/workspace"
-                                                                track-type="nav" track-name="google workspace"
-                                                                track-metadata-eventdetail="https://developers.google.com/workspace"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Workspace
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/maps"
-                                                                track-type="nav" track-name="maps platform"
-                                                                track-metadata-eventdetail="https://developers.google.com/maps"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Maps Platform
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//www.tensorflow.org" track-type="nav"
-                                                                track-name="tensorflow"
-                                                                track-metadata-eventdetail="//www.tensorflow.org"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    TensorFlow
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/web" track-type="nav"
-                                                                track-name="web"
-                                                                track-metadata-eventdetail="https://developers.google.com/web"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Web
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/youtube"
-                                                                track-type="nav" track-name="youtube"
-                                                                track-metadata-eventdetail="https://developers.google.com/youtube"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="develop" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    YouTube
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="devsite-tabs-dropdown-column">
-                                                    <ul class="devsite-tabs-dropdown-section">
-                                                        <li class="devsite-nav-title" role="heading" tooltip="">Grow
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//firebase.google.com" track-type="nav"
-                                                                track-name="firebase"
-                                                                track-metadata-eventdetail="//firebase.google.com"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Firebase
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/google-ads"
-                                                                track-type="nav" track-name="google ads"
-                                                                track-metadata-eventdetail="https://developers.google.com/google-ads"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Ads
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/analytics"
-                                                                track-type="nav" track-name="google analytics"
-                                                                track-metadata-eventdetail="https://developers.google.com/analytics"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Analytics
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//developer.android.com/distribute/"
-                                                                track-type="nav" track-name="google play"
-                                                                track-metadata-eventdetail="//developer.android.com/distribute/"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Play
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/search"
-                                                                track-type="nav" track-name="search"
-                                                                track-metadata-eventdetail="https://developers.google.com/search"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Search
-                                                                </div>
-                                                            </a>
-                                                        </li>
-
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications"
-                                                                track-type="nav"
-                                                                track-name="web push and notification apis"
-                                                                track-metadata-eventdetail="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="grow" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Web Push and Notification APIs
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="devsite-tabs-dropdown-column">
-                                                    <ul class="devsite-tabs-dropdown-section">
-                                                        <li class="devsite-nav-title" role="heading" tooltip="">Earn
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/admob"
-                                                                track-type="nav" track-name="admob"
-                                                                track-metadata-eventdetail="https://developers.google.com/admob"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="earn" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    AdMob
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/google-ads/api"
-                                                                track-type="nav" track-name="google ads api"
-                                                                track-metadata-eventdetail="https://developers.google.com/google-ads/api"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="earn" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Ads API
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/pay" track-type="nav"
-                                                                track-name="google pay"
-                                                                track-metadata-eventdetail="https://developers.google.com/pay"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="earn" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Pay
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="//developer.android.com/google/play/billing/"
-                                                                track-type="nav" track-name="google play billing"
-                                                                track-metadata-eventdetail="//developer.android.com/google/play/billing/"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="earn" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Google Play Billing
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/interactive-media-ads"
-                                                                track-type="nav" track-name="interactive media ads"
-                                                                track-metadata-eventdetail="https://developers.google.com/interactive-media-ads"
-                                                                track-metadata-position="nav - products"
-                                                                track-metadata-module="tertiary nav"
-                                                                track-metadata-module_headline="earn" tooltip="">
-                                                                <div class="devsite-nav-item-title">
-                                                                    Interactive Media Ads
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </tab>
                                     <tab>
-                                        <a href="https://developers.google.com/events" class="gc-analytics-event "
-                                            track-type="nav" track-name="events"
-                                            track-metadata-eventdetail="https://developers.google.com/events"
-                                            track-metadata-position="nav - events" track-metadata-module="primary nav"
-                                            data-category="Site-Wide Custom Events" data-label="Tab: Events">
-                                            Events
-                                        </a>
-                                    </tab>
-                                    <tab>
-                                        <a href="https://developers.google.com/learn" class="gc-analytics-event "
-                                            track-type="nav" track-name="learn"
+                                        <a href="https://developers.google.com/learn" 
+                                            class="gc-analytics-event " 
+                                            track-type="nav"
+                                            track-name="learn" 
                                             track-metadata-eventdetail="https://developers.google.com/learn"
-                                            track-metadata-position="nav - learn" track-metadata-module="primary nav"
-                                            data-category="Site-Wide Custom Events" data-label="Tab: Learn">
-                                            Learn
-                                        </a>
+                                            track-metadata-position="nav - learn" 
+                                            track-metadata-module="primary nav"
+                                            data-category="Site-Wide Custom Events" 
+                                            data-label="Tab: Learn">Learn</a>
                                     </tab>
                                     <tab dropdown="">
-                                        <a href="https://developers.google.com/community" class="gc-analytics-event "
+                                        <a href="https://developers.google.com/community" 
+                                            class="gc-analytics-event "
                                             track-type="nav" track-name="developer communities"
                                             track-metadata-eventdetail="https://developers.google.com/community"
                                             track-metadata-position="nav - developer communities"
-                                            track-metadata-module="primary nav" data-category="Site-Wide Custom Events"
+                                            track-metadata-module="primary nav" 
+                                            data-category="Site-Wide Custom Events"
                                             data-label="Tab: Developer Communities">
                                             Developer Communities
                                         </a>
 
-                                        <a href="#" role="button" aria-haspopup="true" aria-expanded="false"
-                                            aria-label="Dropdown menu for Developer Communities" track-type="nav"
+                                        <a href="#" 
+                                            role="button" 
+                                            aria-haspopup="true" 
+                                            aria-expanded="false"
+                                            aria-label="Dropdown menu for Developer Communities" 
+                                            track-type="nav"
                                             track-name="developer communities"
                                             track-metadata-eventdetail="https://developers.google.com/community"
                                             track-metadata-position="nav - developer communities"
-                                            track-metadata-module="primary nav" data-category="Site-Wide Custom Events"
+                                            track-metadata-module="primary nav" 
+                                            data-category="Site-Wide Custom Events"
                                             data-label="Tab: Developer Communities"
                                             class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
 
@@ -373,8 +114,8 @@
                                                 <div class="devsite-tabs-dropdown-column">
                                                     <ul class="devsite-tabs-dropdown-section">
                                                         <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/community/gdg"
-                                                                track-type="nav" track-name="google developer groups"
+                                                            <a href="https://developers.google.com/community/gdg" track-type="nav"
+                                                                track-name="google developer groups"
                                                                 track-metadata-eventdetail="https://developers.google.com/community/gdg"
                                                                 track-metadata-position="nav - developer communities"
                                                                 track-metadata-module="tertiary nav" tooltip="">
@@ -394,7 +135,6 @@
                                                                 </div>
                                                             </a>
                                                         </li>
-
                                                         <li class="devsite-nav-item">
                                                             <a href="https://www.womentechmakers.com/" track-type="nav"
                                                                 track-name="women techmakers"
@@ -406,7 +146,6 @@
                                                                 </div>
                                                             </a>
                                                         </li>
-
                                                         <li class="devsite-nav-item">
                                                             <a href="https://developers.google.com/community/accelerators"
                                                                 track-type="nav" track-name="accelerators"
@@ -420,10 +159,11 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+
                                                 <div class="devsite-tabs-dropdown-column">
                                                     <ul class="devsite-tabs-dropdown-section">
                                                         <li class="devsite-nav-item">
-                                                            <a href="https://developers.google.com/community/dsc"
+                                                            <a href="https://developers.google.com/community/dsc" 
                                                                 track-type="nav"
                                                                 track-name="google developer student clubs"
                                                                 track-metadata-eventdetail="https://developers.google.com/community/dsc"
@@ -434,13 +174,13 @@
                                                                 </div>
                                                             </a>
                                                         </li>
-
                                                         <li class="devsite-nav-item">
                                                             <a href="https://developers.google.com/community/dsc-solution-challenge"
                                                                 track-type="nav" track-name="2021 solution challenge"
                                                                 track-metadata-eventdetail="https://developers.google.com/community/dsc-solution-challenge"
                                                                 track-metadata-position="nav - developer communities"
                                                                 track-metadata-module="tertiary nav" tooltip="">
+
                                                                 <div class="devsite-nav-item-title">
                                                                     2021 Solution Challenge
                                                                 </div>
@@ -455,161 +195,53 @@
                                         <a href="https://developers.google.com/profile/u/me" class="gc-analytics-event "
                                             track-type="nav" track-name="developer profile"
                                             track-metadata-eventdetail="https://developers.google.com/profile/u/me"
-                                            track-metadata-position="nav - developer profile"
-                                            track-metadata-module="primary nav" data-category="Site-Wide Custom Events"
-                                            data-label="Tab: Developer Profile">
+                                            track-metadata-position="nav - developer profile" track-metadata-module="primary nav"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Developer Profile">
                                             Developer Profile
                                         </a>
                                     </tab>
-                                    <tab>
-                                        <a href="https://developers.googleblog.com" class="gc-analytics-event "
-                                            track-type="nav" track-name="blog"
-                                            track-metadata-eventdetail="https://developers.googleblog.com"
-                                            track-metadata-position="nav - blog" track-metadata-module="primary nav"
-                                            data-category="Site-Wide Custom Events" data-label="Tab: Blog">
-                                            Blog
-                                        </a>
-                                    </tab>
-                                </div>
+                                </div>-->
                             </tab>
                         </nav>
                     </devsite-tabs>
-                </div>
-
-                <devsite-search aria-expanded="false" aria-haspopup="listbox" enable-signin="" enable-search=""
-                    enable-suggestions="" enable-query-completion="" project-name="Google Developers"
-                    tenant-name="Google Developers" role="combobox" style="transform: translate3d(0px, 0px, 0px);"
-                    transition="">
-                    <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET"
-                        abineguid="38A30F992A4945A490E0921086D16CB3">
-                        <div class="devsite-search-container">
-                            <div class="devsite-searchbox">
-                                <input aria-activedescendant="" aria-autocomplete="list" aria-label="Search"
-                                    aria-haspopup="false" aria-multiline="false" autocomplete="off"
-                                    class="devsite-search-field devsite-search-query" name="q" placeholder="Search"
-                                    role="searchbox" type="text" value=""
-                                    aria-controls="devsite-search-popout-container-id-1">
-                                <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+                    
+                    <devsite-search 
+                        aria-expanded="false" 
+                        aria-haspopup="listbox" 
+                        enable-signin="" 
+                        enable-search=""
+                        enable-suggestions="" 
+                        enable-query-completion="" 
+                        project-name="Google Developers"
+                        tenant-name="Google Developers" 
+                        role="combobox" 
+                        style="transform: translate3d(0px, 0px, 0px);"
+                        transition="">
+                        <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET" abineguid="38A30F992A4945A490E0921086D16CB3">
+                            <div class="devsite-search-container">
+                                <div class="devsite-searchbox">
+                                    <input aria-activedescendant="" aria-autocomplete="list" aria-label="Search"
+                                        aria-haspopup="false" aria-multiline="false" autocomplete="off"
+                                        class="devsite-search-field devsite-search-query" name="q" placeholder="Search"
+                                        role="searchbox" type="text" value=""
+                                        aria-controls="devsite-search-popout-container-id-1">
+                                    <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+                                </div>
+                                <button type="button" search-open=""
+                                    class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                                    aria-label="Open search"></button>
                             </div>
-                            <button type="button" search-open=""
-                                class="devsite-search-button devsite-header-icon-button button-flat material-icons"
-                                aria-label="Open search"></button>
-                        </div>
-                        <div class="devsite-popout" id="devsite-search-popout-container-id-1">
-                            <div class="devsite-popout-result devsite-suggest-results-container" devsite-hide=""
-                                hidden=""></div>
-                        </div>
-                    </form>
-                    <button type="button" search-close=""
-                        class="devsite-search-button devsite-header-icon-button button-flat material-icons"
-                        aria-label="Close search"></button>
-                </devsite-search>
-                <div class="devsite-search-background"
-                    style="opacity: 1; width: 24px; height: 36px; transform: scale3d(1, 1, 1);"></div>
-            </div>
-            <devsite-language-selector>
-                <devsite-select class="devsite-language-selector-menu">
-                    <select aria-label="Select your language preference." class="devsite-language-selector-select"
-                        name="language" track-name="click" track-type="languageSelector">
-
-                        <option value="en" lang="en" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="en" track-name="changed" track-type="languageSelector">
-                            English
-                        </option>
-                        <option value="id" lang="id" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="id" track-name="changed" track-type="languageSelector">
-                            Bahasa Indonesia
-                        </option>
-                        <option value="de" lang="de" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="de" track-name="changed" track-type="languageSelector">
-                            Deutsch
-                        </option>
-                        <option value="es" lang="es" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="es" track-name="changed" track-type="languageSelector">
-                            Español
-                        </option>
-                        <option value="fr" lang="fr" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="fr" track-name="changed" track-type="languageSelector">
-                            Français
-                        </option>
-                        <option value="pt_br" lang="pt_br" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="pt_br" track-name="changed" track-type="languageSelector">
-                            Português – Brasil
-                        </option>
-                        <option value="ru" lang="ru" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="ru" track-name="changed" track-type="languageSelector">
-                            Русский
-                        </option>
-                        <option value="zh_cn" lang="zh_cn" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="zh_cn" track-name="changed" track-type="languageSelector">
-                            中文 – 简体
-                        </option>
-                        <option value="ja" lang="ja" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="ja" track-name="changed" track-type="languageSelector">
-                            日本語
-                        </option>
-                        <option value="ko" lang="ko" track-metadata-original-language="zh_tw"
-                            track-metadata-selected-language="ko" track-name="changed" track-type="languageSelector">
-                            한국어
-                        </option>
-                    </select>
-                    <div class="devsite-select"><label id="devsite-select-11255470443997495-label" style="display:none;"
-                            aria-label="Select your language preference.">選取選項</label>
-                            <button type="button"
-                            class="devsite-select-toggle" 
-                            id="devsite-select-11255470443997495-button"
-                            aria-haspopup="true"
-                            aria-labelledby="devsite-select-11255470443997495-label devsite-select-11255470443997495-button"
-                            aria-controls="devsite-select-11255470443997495-popup">
-                            <span class="devsite-select-toggle-label">English</span>
-                            <span class="devsite-icon devsite-icon-arrow-drop-down devsite-select-toggle-icon" aria-hidden="true"></span></button>
-                        <!-- <ul class="devsite-select-list" id="devsite-select-11255470443997495-popup" tabindex="-1"
-                            role="listbox" scrollbars="" aria-labelledby="devsite-select-11255470443997495-button">
-                            <li role="option" lang="en" value="en" id="devsite-select-11255470443997495-0"
-                                class="devsite-select-item" data-index="0" aria-selected="false" aria-label="English">
-                                English</li>
-                            <li role="option" lang="id" value="id" id="devsite-select-11255470443997495-1"
-                                class="devsite-select-item" data-index="1" aria-selected="false"
-                                aria-label="Bahasa Indonesia">Bahasa Indonesia</li>
-                            <li role="option" lang="de" value="de" id="devsite-select-11255470443997495-2"
-                                class="devsite-select-item" data-index="2" aria-selected="false" aria-label="Deutsch">
-                                Deutsch</li>
-                            <li role="option" lang="es" value="es" id="devsite-select-11255470443997495-3"
-                                class="devsite-select-item" data-index="3" aria-selected="false" aria-label="Español">
-                                Español</li>
-                            <li role="option" lang="fr" value="fr" id="devsite-select-11255470443997495-4"
-                                class="devsite-select-item" data-index="4" aria-selected="false" aria-label="Français">
-                                Français</li>
-                            <li role="option" lang="pt_br" value="pt_br" id="devsite-select-11255470443997495-5"
-                                class="devsite-select-item" data-index="5" aria-selected="false"
-                                aria-label="Português – Brasil">Português – Brasil</li>
-                            <li role="option" lang="ru" value="ru" id="devsite-select-11255470443997495-6"
-                                class="devsite-select-item" data-index="6" aria-selected="false" aria-label="Русский">
-                                Русский</li>
-                            <li role="option" lang="zh_cn" value="zh_cn" id="devsite-select-11255470443997495-7"
-                                class="devsite-select-item" data-index="7" aria-selected="false" aria-label="中文 – 简体">中文
-                                – 简体</li>
-                            <li role="option" lang="ja" value="ja" id="devsite-select-11255470443997495-8"
-                                class="devsite-select-item" data-index="8" aria-selected="false" aria-label="日本語">日本語
-                            </li>
-                            <li role="option" lang="ko" value="ko" id="devsite-select-11255470443997495-9"
-                                class="devsite-select-item" data-index="9" aria-selected="false" aria-label="한국어">한국어
-                            </li>
-                        </ul> -->
-                    </div>
-                </devsite-select>
-            </devsite-language-selector>
-            <devsite-user enable-profiles="" fp-auth="" id="devsite-user"
-                sign-in-url="https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2F&amp;prompt=select_account"
-                sign-out-url="https://developers.google.com/_d/signout?continue=https%3A%2F%2Fdevelopers.google.com%2F"
-                url="https://developers.google.com/_d/signout?continue=https%3A%2F%2Fdevelopers.google.com%2F">
-                <div class="ogb-wrapper ogb-si"><a
-                        href="https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2F&amp;prompt=select_account"
-                        class="devsite-user-signin button devsite-top-button" track-type="globalNav" track-name="signIn"
-                        track-metadata-eventdetail="nav" track-metadata-position="nav">
-                        登入
-                    </a></div>
-            </devsite-user>
+                            <div class="devsite-popout" id="devsite-search-popout-container-id-1">
+                                <div class="devsite-popout-result devsite-suggest-results-container" devsite-hide=""
+                                    hidden=""></div>
+                            </div>
+                        </form>
+                        <button type="button" search-close=""
+                            class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+                            aria-label="Close search"></button>
+                    </devsite-search>
+                <!-- </div> -->
+                <!-- </div> -->
         </div>
     </devsite-header>
 
