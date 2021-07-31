@@ -26,7 +26,7 @@
     font-weight: normal;
     font-style: normal;
     font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
+    /* display: inline-block; */
     line-height: 1;
     text-transform: none;
     letter-spacing: normal;
@@ -45,14 +45,28 @@
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+.devsite-site-logo {
+    height: var(--devsite-logo-height,32px);
+}
 
+devsite-header .devsite-product-name-wrapper, devsite-header .devsite-site-logo-link, .devsite-top-logo-row {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 .devsite-product-name-link, .devsite-site-logo-link {
     -ms-flex-align: center;
     opacity: 1;
     -webkit-transition: opacity .2s;
     transition: opacity .2s;
 }
-/* .devsite-top-logo-row {
+.devsite-top-logo-row {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -moz-box-align: center;
@@ -64,9 +78,10 @@
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
     height: 48px;
     padding: 0 24px;
     position: relative;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-} */
+}
