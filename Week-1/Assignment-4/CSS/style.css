@@ -56,7 +56,12 @@ ul li{
 .devsite-site-logo {
     height: var(--devsite-logo-height,32px);
 }
-
+devsite-header{
+    display: flex;
+    flex-direction: column;
+    /* position: fixed;  */
+    /* flex: 1; */
+}
 devsite-header .devsite-header-icon-button {
     color: var(--devsite-header-icon-color,var(--devsite-secondary-text-rgba));
     display: flex;
@@ -102,13 +107,41 @@ devsite-tabs tab[dropdown]>a {
     color: #5f6368;
 }
 
+.devsite-banner-announcement:not(.devsite-banner-tenant) {
+    display: flex;
+    background: #202124;
+    color: white;
+    font-weight: 500;
+    width: 100vw;
+    margin-left: -24px;
+    text-align: center;
+    line-height: 60px;
+    /* justify-content: center; */
+}
+.devsite-banner-announcement a {
+    color: white;
+    font-weight: 700;
+}                       
+.devsite-banner-announcement a:link,
+.devsite-banner-announcement a:visited {
+    background: 0;
+}                    
+.devsite-banner-announcement a:hover,
+.devsite-banner-announcement a:focus {
+    text-decoration: none;
+}
+.devsite-banner-announcement .devsite-banner-message-text {
+    margin: 0px;
+    height: 60px;
+    width: 100vw;
+}
+/* =============================== */
 devsite-header .devsite-top-logo-row{
     display:flex;
     flex: 1;
     align-items: center;
     justify-content: space-around;
 }
-
 devsite-search {
     border-radius: var(--devsite-search-border-radius,2px);
     display: inline-block;
@@ -136,6 +169,21 @@ devsite-search .devsite-search-form{
 devsite-search-button{
     border-radius: 10px;
 }
+
+/* devsite-header .devsite-header-upper-tabs {
+    margin-left: var(--devsite-upper-tab-margin-x,48px);
+} */
+/* devsite-header .devsite-header-upper-tabs {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    margin: 0;
+    opacity: 1;
+    position: relative;
+    z-index: 8;
+} */
 
 /* body[ready] .devsite-wrapper {
     display: flex;
@@ -191,20 +239,7 @@ devsite-header .devsite-header-upper-tabs{
     justify-content: space-between;
 
 } */
-/* devsite-header .devsite-header-upper-tabs {
-    margin-left: var(--devsite-upper-tab-margin-x,48px);
-} */
-/* devsite-header .devsite-header-upper-tabs {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 0;
-    -moz-box-flex: 1;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0;
-    margin: 0;
-    opacity: 1;
-    position: relative;
-    z-index: 8;
-} */
+
 
 /* devsite-header .devsite-product-name-wrapper, devsite-header .devsite-site-logo-link, .devsite-top-logo-row {
     -webkit-box-align: center;
