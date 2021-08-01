@@ -238,6 +238,40 @@ devsite-tabs tab[dropdown]>a {
     height: 60px;
     width: 100vw;
 }
+.devsite-landing-row-item-custom-image-icon{
+    width: 64px;
+}
+/* .devsite-landing-row-item-custom-image-icon{
+    font-size: 96px;
+    max-height: 96px;
+    width: 96px;
+} */
+.app-item, 
+.devsite-landing-row-header,
+.devsite-landing-row-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.devsite-landing-row-inner{
+    height:500px;
+}
+.app-item{
+    min-width:240px;
+    min-height:96px;    
+    justify-content: space-between;
+}
+.devsite-landing-row-group{
+    width:90vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content:space-between;
+    align-items:center;
+    background-color: yellow;
+}
 /* =============================== */
 devsite-header .devsite-top-logo-row{
     display:flex;
