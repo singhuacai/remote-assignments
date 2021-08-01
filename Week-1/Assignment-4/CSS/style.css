@@ -6,6 +6,7 @@
 }
 html{
     padding: 0 24px;
+    margin: 0px;
 }
 body, html {
     color: var(--devsite-primary-text-color);
@@ -22,6 +23,14 @@ ul li{
 /* ================================= 
   Base Layout Styles
 ==================================== */
+/* ---- Layout Containers ---- */
+/*頁面寬度若<769px, 執行此段*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
 /* ---- Navigation ---- */
 .button-flat, .button-flat:active, .button-flat:focus, .button-flat:hover {
     background: 0;
@@ -58,14 +67,42 @@ ul li{
 }
 
 .hide-from-toc{
-    margin: 50px;
+    font-size: 32px;
 }
 .hide-from-toc > a{
     text-decoration:none;
     color: #1a73e8;
 }
+
+.devsite-landing-row-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.devsite-landing-row-item-body{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* text-align: left; */
+    /* justify-content: space-between; */
+}
+.devsite-landing-row-item-media{
+    display: flex;
+    flex: 1;   
+    /* text-align: left; */
+    /* justify-content: space-between; */
+}
+.description-item{
+    display:flex;
+    flex-grow: 1;
+    flex-basis: 0;
+}
 .devsite-landing-row-item-buttons .button {
-    margin: 4px 4px 4px 12px;
+    margin: 34px 4px 4px 12px;
+    padding: 0px 24px;
 }
 .button-blue, .button-blue:active, .button-blue:focus, .button-blue:hover, .button-green, .button-green:active, .button-green:focus, .button-green:hover, .button-primary, .button-primary:active, .button-primary:focus, .button-primary:hover, .button-red, .button-red:active, .button-red:focus, .button-red:hover, body devsite-footer-utility .devsite-footer-utility-button>a, body devsite-footer-utility .devsite-footer-utility-button>a:active, body devsite-footer-utility .devsite-footer-utility-button>a:focus, body devsite-footer-utility .devsite-footer-utility-button>a:hover {
     border: 0;
@@ -106,13 +143,20 @@ ul li{
     transition: background-color .2s,border .2s,box-shadow .2s;
     vertical-align: middle;
     white-space: nowrap;
-    width: var(--devsite-button-width,auto);
+    width: var(--devsite-button-width,auto); 
 }
 .button-primary, .button-raised {
     --devsite-button-disabled-background: rgba(241,243,244,0.38);
     --devsite-button-disabled-border: 0;
     background-color: #1a73e8;
     color: white;
+}
+
+.devsite-landing-row-item-image{
+    display:flex;
+    /* width: 50vw; */
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 devsite-header{
@@ -227,6 +271,32 @@ devsite-search .devsite-search-form{
 }
 devsite-search-button{
     border-radius: 10px;
+}
+
+
+
+/* ================================= 
+    Media  Queries
+==================================== */
+/*頁面寬度若>=769px, 執行此段*/
+@media(min-width: 769px){ 
+    .devsite-landing-row-item{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        /* flex: 1 1 500px; */
+      /* height:290px; */
+    } 
+    .devsite-landing-row-item-media{
+        display: flex;
+        order: 1;
+    }
+    /* .container {
+        width: 70%;
+        margin: 0 auto;
+      }  */
 }
 
 /* devsite-header .devsite-header-upper-tabs {
