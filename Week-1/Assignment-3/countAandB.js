@@ -8,7 +8,6 @@ function countAandB(input) {
             countB++;
         }
     }
-    countA + countB;
     return (`${countA + countB} ( ${countA} 'a' ${letters(countA)}, ${countB} 'b' ${letters(countB)})`);
 }
 function letters(count){
