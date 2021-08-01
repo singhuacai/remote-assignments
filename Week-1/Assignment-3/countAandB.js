@@ -1,7 +1,6 @@
 function countAandB(input) {
     var countA = 0;
     var countB = 0;
-    var sum = 0;
     for (var i = 0; i < input.length; i++) {
         if(input[i] ==='a'){
             countA++;
@@ -9,22 +8,15 @@ function countAandB(input) {
             countB++;
         }
     }
-    sum = countA + countB;
-    if (countA===0 && countB ===0){
-        return (0);
-    }else if(countA <= 1 && countB > 1){
-        return (sum+" ("+ countA +" \'a\' letter and "+ countB + " \'b\' letters)"); 
-    }else if(countA > 1 && countB <= 1){
-        return (sum+" ("+ countA +" \'a\' letters and "+ countB + " \'b\' letter)"); 
-    }else if(countA <= 1 && countB <= 1){
-        return (sum+" ("+ countA +" \'a\' letter and "+ countB + " \'b\' letter)"); 
-    }else{
-        return (sum+" ("+ countA +" \'a\' letters and "+ countB + " \'b\' letters)");
-    }   
+    countA + countB;
+    return (`${countA + countB} ( ${countA} 'a' ${letters(countA)}, ${countB} 'b' ${letters(countB)})`);
+}
+function letters(count){
+    return count > 1?"letters" : "letter";
 }
 
-// let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
-// console.log(countAandB(input1)); 
+let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
+console.log(countAandB(input1)); 
 
-let input2 = ['e', 'd', 'c', 'd', 'e'];
-console.log(countAandB(input2)); 
+// let input2 = ['e', 'd', 'c', 'd', 'e'];
+// console.log(countAandB(input2)); 
