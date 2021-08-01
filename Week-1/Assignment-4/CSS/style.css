@@ -62,6 +62,36 @@ ul li{
     font-feature-settings: 'liga';
 }
 
+/*===============================
+         the black block
+================================*/
+.devsite-banner-announcement:not(.devsite-banner-tenant) {
+    background: #202124;
+    color: white;
+    font-weight: 500;    
+}
+.devsite-banner-announcement a {
+    color: white;
+    font-weight: 700;
+}                       
+.devsite-banner-announcement a:link,
+.devsite-banner-announcement a:visited {
+    background: 0;
+}                    
+.devsite-banner-announcement a:hover,
+.devsite-banner-announcement a:focus {
+    text-decoration: none;
+}
+.devsite-banner-announcement .devsite-banner-message-text {
+    display:flex;
+    /*這兩行才能讓內容上下置中*/
+    height: 60px;
+    line-height: 60px;
+    /*=====================*/
+    justify-content: center;
+}
+/*===============================
+================================*/
 .devsite-site-logo {
     height: var(--devsite-logo-height,32px);
 }
@@ -210,33 +240,7 @@ devsite-tabs tab[dropdown]>a {
     color: #5f6368;
 }
 
-.devsite-banner-announcement:not(.devsite-banner-tenant) {
-    display: flex;
-    background: #202124;
-    color: white;
-    font-weight: 500;
-    width: 100%;
-    text-align: center;
-    line-height: 60px;
-    /* justify-content: center; */
-}
-.devsite-banner-announcement a {
-    color: white;
-    font-weight: 700;
-}                       
-.devsite-banner-announcement a:link,
-.devsite-banner-announcement a:visited {
-    background: 0;
-}                    
-.devsite-banner-announcement a:hover,
-.devsite-banner-announcement a:focus {
-    text-decoration: none;
-}
-.devsite-banner-announcement .devsite-banner-message-text {
-    margin: 0px;
-    height: 60px;
-    width: 100vw;
-}
+
 .devsite-landing-row-item-custom-image-icon{
     width: 64px;
 }
@@ -321,8 +325,45 @@ devsite-search .devsite-search-form{
 devsite-search-button{
     border-radius: 10px;
 }
+/* ================================= 
+    picture collapse
+==================================== */
+/* .devsite-landing-row-inner {
+    margin: 0 auto;
+    max-width: var(--devsite-landing-row-max-width,1488px);
+    padding: var(--devsite-landing-group-padding);
+}
+.devsite-landing-row:not([background]) {
+    background-color: var(--devsite-background-1);
+}
+.devsite-landing-row {
+    padding: var(--devsite-landing-row-padding);
+}
+.devsite-landing-row {
+    --devsite-landing-group-padding: 0 24px;
+    --devsite-landing-row-padding: 40px 0;
+}
+
+.devsite-landing-row-item-media {
+    min-width: 0;
+    padding: var(--devsite-item-media-padding,0);
+}
 
 
+.dgc-programs .devsite-landing-row-item-image::before {
+    background: center / contain no-repeat;
+    content: '';
+    display: block;
+    height: 160px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+}
+.dgc-programs--events .devsite-landing-row-item-image::before {
+    background-image: url(https://developers.google.com/site-assets/images/home/events-graphic.png);
+} */
 
 /* ================================= 
     Media  Queries
