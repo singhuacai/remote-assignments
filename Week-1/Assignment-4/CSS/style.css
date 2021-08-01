@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 }
 html{
-    padding: 0 24px;
+    padding: 0px;
     margin: 0px;
 }
 body, html {
@@ -28,7 +28,7 @@ ul li{
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
 }
   
 /* ---- Navigation ---- */
@@ -215,8 +215,7 @@ devsite-tabs tab[dropdown]>a {
     background: #202124;
     color: white;
     font-weight: 500;
-    width: 100vw;
-    margin-left: -24px;
+    width: 100%;
     text-align: center;
     line-height: 60px;
     /* justify-content: center; */
@@ -255,22 +254,38 @@ devsite-tabs tab[dropdown]>a {
     align-items: center;
 }
 .devsite-landing-row-inner{
-    height:500px;
+    height:600px;
 }
-.app-item{
-    min-width:240px;
-    min-height:96px;    
-    justify-content: space-between;
+.app-item{   
+    min-height: 30vh;/*沒有這行會失敗!*/
+    justify-content: space-around;
 }
 .devsite-landing-row-group{
-    width:90vw;
+    width:90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex: 1 1 auto;
     justify-content:space-between;
     align-items:center;
-    background-color: yellow;
+    /* background-color: yellow; */
+}
+.app-icon{
+    padding: 0px auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+.item-description{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+    width: 100%;
+    /* flex: 1 0 auto; */
 }
 /* =============================== */
 devsite-header .devsite-top-logo-row{
