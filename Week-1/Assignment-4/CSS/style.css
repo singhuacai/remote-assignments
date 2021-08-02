@@ -28,7 +28,9 @@ ul li{
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+    align-content: center;
+    /* align-items:center; */
 }
   
 /* ---- Navigation ---- */
@@ -328,6 +330,30 @@ devsite-search-button{
 /* ================================= 
     picture collapse
 ==================================== */
+/* test */
+.Product_block_hot{
+    position: relative;/*設為相對定位(relative)*/
+    text-align: center;
+    border:1px solid black;
+}
+
+/* hot紅色區塊 */
+.Product_hot_icon{
+    position: absolute;/*設為絕對定位(absolute)*/
+    font-weight: bold;
+    top: 0px;
+    right : 0px; /*右邊上面都設0，則出現在右上方*/
+    color: white;
+    display: block;
+    background: red;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+
+/* test */
+
 /* .devsite-landing-row-inner {
     margin: 0 auto;
     max-width: var(--devsite-landing-row-max-width,1488px);
