@@ -1,7 +1,7 @@
 var countDict = {};
 function count(input) {
     for( let i = 0 ; i < input.length ; i++ ){
-        if(countDict[input[i]]=== undefined){
+        if(countDict[input[i]] === undefined){
             countDict[input[i]] = 1;
         }else{
             countDict[input[i]] += 1;
