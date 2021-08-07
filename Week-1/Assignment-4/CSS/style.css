@@ -220,7 +220,6 @@ devsite-header .devsite-header-icon-button {
     padding: 8px;
     -webkit-transition: color .2s;
     transition: color .2s;
-    /* width: 24px;*/
 }
 
 devsite-tabs{
@@ -339,7 +338,8 @@ devsite-search-button{
     picture collapse
 ==================================== */
 /* test */
-.Product_block_hot{
+.event_block,
+.community_block{
     display:flex;
     flex-direction: column;
     position: relative; /*設為相對定位(relative)*/
@@ -352,8 +352,7 @@ devsite-search-button{
     min-height: 300px;
 }
 
-/*hot紅色區塊*/
-.Product_hot_icon{
+.event_block_item{
     position: absolute;     /*設為絕對定位(absolute)*/
     font-weight: bold;
     top: -40px;
@@ -363,6 +362,7 @@ devsite-search-button{
     /* background: red; */
     text-align: center;
 }
+
 .description_Event{
     display:flex;
     flex-direction: column;
@@ -394,6 +394,7 @@ devsite-search-button{
     border-radius: 3px;  
     box-shadow: none;
 }
+
 .button_community>a, .button_Event > a{
     text-align: center;   
     color: #1a73e8;
@@ -401,9 +402,13 @@ devsite-search-button{
     font-size: 14px;
     padding: 0px 16px;
 }
+
 .event_and_community{
-   display: flex;
-   flex: 1;
+    display: flex; 
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100%;    
 }
 
 /* test */
