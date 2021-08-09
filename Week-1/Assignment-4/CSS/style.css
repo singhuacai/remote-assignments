@@ -407,10 +407,101 @@ devsite-search-button{
     display: flex; 
     flex: 1;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     height: 100%;    
 }
 
+/*==========================
+        News part
+===========================*/
+.news{
+    display: flex;
+    font-size: 32px;
+    font-weight: lighter;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    margin: 0px auto;
+    margin-bottom: -20px;
+    min-height: 120px;
+}
+.news_title{
+    font-size: 24px;
+    text-decoration: none;
+    color:#1a73e8;
+    margin:0 0 24px;    
+}
+
+.news_title_description{
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.news_block{
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    /* padding: 0 auto; */
+    /* margin-top: 30px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.news_item{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin: 15px;
+    padding: 0px;
+    flex: 1 1 auto;    
+    /* min-height: 400px; */
+    max-width: 21vw;
+}
+.news_item_picture{
+    display: flex;
+    flex: 1;
+    size: 100px;
+    /* justify-content: center;
+    align-self: center;
+    align-content: center; */
+    padding:20px auto;
+    margin: 20px auto 10px auto;
+}
+
+.News_item_button{
+    display: flex;
+    align-self: flex-start;
+    align-items: flex-end;
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px auto;
+    margin-top: auto;
+    margin-left: -15px;
+    box-shadow: none;
+}
+
+.News_item_button:hover{
+    background-color: #e8f0fe;
+}
+
+.News_item_button > a{
+    font-weight: bold;    
+    font-size: 14px;
+    color:#1a73e8;
+    text-decoration: none;
+}
+
+.news_item_description{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 20px;
+}
 /* test */
 
 /* .devsite-landing-row-inner {
