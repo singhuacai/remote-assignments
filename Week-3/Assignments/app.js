@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send("<h1> Hello, My Server! </h1>");
@@ -11,7 +12,7 @@ app.get('/data', (req, res) => {
         const num = Number(param);            // 將 param 轉型為數字，若參數內非數字，則顯示 NaN
         if(Number.isInteger(num) && num>0){
             const sum = (1+num)*num/2;
-            return res.send(`<h1>1+2+....+${num}=${sum}</h1>`);
+            return res.send(`<h1>${sum}</h1>`);
         }else{
             return res.send('<h1>Wrong Parameter</h1>');
         }
