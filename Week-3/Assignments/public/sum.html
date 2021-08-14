@@ -15,14 +15,24 @@
       xhr.open('GET', `/data?number=${number}`);
       xhr.send();
     }
+
+    function next(evt,item) { 
+      var e = evt || window.event; 
+　    if (evt.keyCode === 9 || evt.keyCode === 13) {
+　　    document.forms[0].elements[item].focus();
+　　    return false;
+　    } 
+    } 
   </script>
 </head>
 <body>
   <div class="heading">
     <h1>Result</h1>
-      Please enter a positive integer:
-      <input type="text" id="number" name="number">
-      <button id = "sumbit" onclick = "sendAJAX()">Submit</button>
+    <form>
+      <p>Please enter a positive integer:</p>
+      <input type="text" id="number" name="number" onKeyDown = "return next(event,'submit')">
+      <input type="button" id = "sumbit" onclick = "sendAJAX()" name = "submit" value="Submit">
+    </form>
   </div>
   <div id="ajax">
 
