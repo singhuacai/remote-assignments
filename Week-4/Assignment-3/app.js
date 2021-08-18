@@ -2,7 +2,6 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 app.use(express.static('public'));
-app.set('view engine', 'pug');
 
 
 // Create connection
@@ -18,24 +17,48 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("MySQL Connected!");
 });
+// app.get('/member', (req, res) => {
+//     res.send("/member.html");
+// });
 
-app.get('/member', (req, res) => {
+// signUp
+app.get('/homepage', (req, res) => {
     const email = req.query.email;
     const password = req.query.password;
     console.log(email);
     console.log(password);
-    // let user = { email: email, password: password };
-
     con.query(`SELECT count(*) AS CNT FROM user WHERE email='${email}'`, (err, result) => {
         if (err) throw err;
-        // console.log(result[0].CNT);
         if(result[0].CNT === 0){
-            console.log('add!');
+            // console.log('add!');
+            let post = {email: email, password: password};
+            let sql = "INSERT INTO user SET ?";
+            con.query(sql, post, (err, result) => {
+                if(err) throw err;
+                console.log(result);
+                res.redirect('/member.html');
+            })
         }else{
-            console.log('omit!');
+            // console.log('omit!');
+            res.send("This email has already been registered");
         }
     });
-    // res.render("member");
+})
+
+//signIn
+app.get('/signin', (req, res) =>{
+    const email = req.query.email;
+    const password = req.query.password;
+    console.log(email);
+    console.log(password);
+    con.query(`SELECT count(*) AS CNT FROM user WHERE email='${email}' AND password='${password}'`, (err, result) => {
+        console.log(result[0].CNT);
+        if(result[0].CNT !== 0){
+            res.redirect('/member.html');
+        }else{
+            res.send("The email or password is wrong! Please try again!");
+        }
+    })
 })
 
 // Create DB

@@ -1,0 +1,32 @@
+.ajax{
+    color: yellow;
+    font-weight: bold;
+    background-color: lightcoral;
+    border:solid red 3px;
+    display:none;
+    margin: 10px;
+    padding: 10px;
+    width:fit-content
+}
+
+.signup,.signin{
+    color: darkblue;            
+    margin:-10px -10px 20px -10px;
+    padding:10px;
+    text-align: center;
+}
+.signup{
+    background-color: honeydew;
+}
+
+.signin{
+    background-color:papayawhip;
+}
+
+.formSignUp,
+.formSignIn{
+    border:solid black 3px;
+    margin:25px auto;
+    padding: 10px;
+    width:fit-content;
+}
