@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // document.getElementById('ajax').innerHTML = xhr.responseText;
+            }
+        };
+        function sendAJAX() {
+            // TODO 之後要改成用 body
+            const email= document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            xhr.open('GET', `/member?email=${email}&password=${password}`);
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the home page</h1>
+    </header>
+    <!--/.main-header-->
+    <div id="ajax">
+
+    </div>
+
+    <form action="" method="post" name="formAdd" id="formAdd">
+        <label>Email</label> <input type="text" id="email" name="email" /><br>
+        <label>Password</label> <input type="text" id="password" name="password" /><br>
+        <input type="button" id="signup" onclick="sendAJAX()" name="signup" value="Sign Up" />
+    </form>
+</body>
