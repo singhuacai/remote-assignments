@@ -3,7 +3,6 @@ const mysql = require('mysql');
 const app = express();
 app.use(express.static('public'));
 
-
 // Create connection
 var con = mysql.createConnection({
     host: 'localhost',
@@ -78,19 +77,6 @@ app.get('/createusertable', (req, res) => {
         if (err) throw err;
         console.log(result);
         res.send('user table created');
-    })
-})
-
-// insert item
-app.get('/addpost', (req, res) => {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    let post = { email: email, password: password };
-    let sql = "INSERT INTO posts SET ?";
-    con.query(sql, post, (err, result) => {
-        if (err) throw err;
-        console.log(result);
-        res.send('Post 1 added...');
     })
 })
 

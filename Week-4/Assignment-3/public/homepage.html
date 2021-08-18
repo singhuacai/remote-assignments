@@ -4,8 +4,6 @@
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
-    
-
     <script>
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
@@ -30,7 +28,7 @@
         var xhr_2 = new XMLHttpRequest();
         xhr_2.onreadystatechange = function () {
             if (xhr_2.readyState === 4 && xhr_2.status === 200) {
-                const ajax = document.getElementById('ajax');
+                const ajax = document.getElementById('ajax_signin');
                 if(xhr_2.responseText ==="The email or password is wrong! Please try again!"){
                     ajax.style.display="block";
                     ajax.innerHTML = xhr_2.responseText;
@@ -67,6 +65,9 @@
         <input type="button" id="signup" onclick="signUp()" name="signup" value="Sign Up" />
     </form>
 
+    <div id="ajax_signin" class='ajax'>
+
+    </div>
     <form action="" method="post" name="formSignIn" id="formSignIn" class="formSignIn">
         <h2 class="signin">Sign In</h2>
         <label>Email: </label>
