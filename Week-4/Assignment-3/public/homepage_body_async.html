@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const ajax = document.getElementById('ajax');
+                if(xhr.responseText ==="This email has already been registered"){
+                    ajax.style.display="block";
+                    ajax.innerHTML = xhr.responseText;
+                }else{
+                    document.getElementById('home').innerHTML = xhr.responseText;
+                }
+            }
+        };
+        function signUp(){
+            // TODO 之後要改成用 body
+            const email= document.getElementById("email_signup").value;
+            const password = document.getElementById("password_signup").value;
+            xhr.open('POST', '/homepage');
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({email:email, password:password}));
+        }
+    /* ===================================================================*/
+        var xhr_2 = new XMLHttpRequest();
+        xhr_2.onreadystatechange = function () {
+            if (xhr_2.readyState === 4 && xhr_2.status === 200) {
+                const ajax = document.getElementById('ajax_signin');
+                if(xhr_2.responseText ==="The email or password is wrong! Please try again!"){
+                    ajax.style.display="block";
+                    ajax.innerHTML = xhr_2.responseText;
+                }else{
+                    document.getElementById('home').innerHTML = xhr_2.responseText;
+                }
+            }
+        };
+        function signIn() {
+            const email= document.getElementById("email_signin").value;
+            const password = document.getElementById("password_signin").value;
+            xhr_2.open('POST', '/signin');
+            xhr_2.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr_2.send(JSON.stringify({email:email, password:password}));
+        }
+    </script>
+</head>
+
+<body id="home" class="home">
+    <header>
+        <h1>Welcome to the home page</h1>
+    </header>
+    <!--/.main-header-->
+    <div id="ajax" class='ajax'>
+
+    </div>
+    <form action="http://127.0.0.1:3000/homepage" method="POST" name="formSignUp" id="formSignUp" class="formSignUp" enctype="multipart/form-data">
+        <h2 class="signup">Sign Up</h2>
+        <label>Email: </label>
+        <input type="email" id="email_signup" name="email" required="required"/><br>
+        <label>Password: </label>
+        <input type="text" id="password_signup" name="password" required="required"/><br>
+        <br>
+        <input type="button" id="signup" onclick="signUp()" name="signup" value="Sign Up" />
+    </form>
+
+    <div id="ajax_signin" class='ajax'>
+
+    </div>
+    <form action="http://127.0.0.1:3000/signin" method="POST" name="formSignIn" id="formSignIn" class="formSignIn" enctype="multipart/form-data">
+        <h2 class="signin">Sign In</h2>
+        <label>Email: </label>
+        <input type="email" id="email_signin" name="email" required="required"/><br>
+        <label>Password: </label>
+        <input type="text" id="password_signin" name="password" required="required"/><br>
+        <input type="button" id="signin" onclick="signIn()" name="signin" value="Sign In" />
+    </form>
+</body>
