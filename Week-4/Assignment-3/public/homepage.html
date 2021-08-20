@@ -38,10 +38,10 @@
             }
         };
         function signIn() {
-            // TODO 之後要改成用 body
             const email= document.getElementById("email_signin").value;
             const password = document.getElementById("password_signin").value;
             xhr_2.open('GET', `/signin?email=${email}&password=${password}`);
+            // xhr_2.send(JSON.stringify({email: email, password: password}));
             xhr_2.send();
         }
     </script>
