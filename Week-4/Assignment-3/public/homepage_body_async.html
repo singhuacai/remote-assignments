@@ -25,7 +25,7 @@
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             xhr.send(JSON.stringify({email:email, password:password}));
         }
-    /* ===================================================================*/
+    /*===================================================================*/
         var xhr_2 = new XMLHttpRequest();
         xhr_2.onreadystatechange = function () {
             if (xhr_2.readyState === 4 && xhr_2.status === 200) {
@@ -63,7 +63,7 @@
         <label>Password: </label>
         <input type="text" id="password_signup" name="password" required="required"/><br>
         <br>
-        <input type="button" id="signup" onclick="signUp()" name="signup" value="Sign Up" />
+        <input type="button" id="signup" onclick="signUp(),signUp()" name="signup" value="Sign Up" />
     </form>
 
     <div id="ajax_signin" class='ajax'>

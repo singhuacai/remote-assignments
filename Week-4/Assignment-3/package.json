@@ -9,9 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async-lock": "^1.3.0",
+    "await-lock": "^2.1.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
+    "node-async-locks": "^2.0.1",
     "php": "^1.0.2",
     "pug": "^3.0.2",
     "static": "^2.0.0"

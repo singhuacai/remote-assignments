@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 app.use(express.static('public'));
+var AsyncLock = require('node-async-locks').AsyncLock;
 
 // 因為想從Request Payload中的data拿值，且其為JSON格式
 // 所以需引進 body-parser 及 bodyParser.json()
@@ -36,22 +37,27 @@ function query(sql, param) {
 }
 
 // signUp
-app.post('/homepage', async (req, res) => {
+app.post('/homepage', (req, res) => {
     console.log(req.body);
     const email = req.body.email;
     const password = req.body.password;
     console.log(email);
     console.log(password);
-    let sql = "SELECT count(*) AS CNT FROM user WHERE email=?";
-    const ret = await query(sql, email);
-    if (ret[0].CNT === 0) {
-        let post = { email: email, password: password };
-        let sql = "INSERT INTO user SET ?";
-        await query(sql, post);
-        res.redirect('/member.html');
-    } else {
-        res.send("This email has already been registered");
-    }
+    var lock = new AsyncLock();
+    lock.enter(async function(token) {
+        let sql = "SELECT count(*) AS CNT FROM user WHERE email=?";
+        const ret = await query(sql, email);
+        if (ret[0].CNT === 0) {
+            let post = { email: email, password: password };
+            let sql = "INSERT INTO user SET ?";
+            await query(sql, post);
+            lock.leave(token);
+            res.redirect('/member.html');
+        } else {
+            lock.leave(token);
+            res.send("This email has already been registered");
+        }
+    })
 })
 
 //signIn
